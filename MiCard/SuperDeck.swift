@@ -74,6 +74,8 @@ class SuperDeck: NSObject {
         let face1:String = item.objectForKey("face1") as! String
         let face2:String = item.objectForKey("face2") as! String
         
+        NSLog("%@", face1)
+        
         let newItem = NSEntityDescription.insertNewObjectForEntityForName("CardFile", inManagedObjectContext: managedObjectContext!) as! CardFile
         newItem.father = prt
         newItem.isfile = isfile
@@ -106,14 +108,13 @@ class SuperDeck: NSObject {
             // If it doesn't, copy it from the default file in the Bundle
             if let bundlePath = NSBundle.mainBundle().pathForResource(plist, ofType: "plist") {
                 
-                //let resultDictionary = NSMutableArray(contentsOfFile: bundlePath)
-                do {
-                    //println("Bundle GameData.plist file is --> \(resultDictionary?.description)")
+                let items = NSMutableArray(contentsOfFile: bundlePath)
                 
-                    try fileManager.copyItemAtPath(bundlePath, toPath: path.absoluteString)
-                } catch _ {
-                }
                 print("copy")
+                for item in items! {
+                    addItemDict(item as! NSDictionary, toparent: self.parent!)
+                }
+                
             } else {
                 print("plist not found. Please, make sure it is part of the bundle.")
             }
@@ -124,14 +125,6 @@ class SuperDeck: NSObject {
             //fileManager.removeItemAtPath(path, error: nil)
         }
         
-        let resultArray = NSMutableArray(contentsOfFile: path.absoluteString)
-        // println("Loaded GameData.plist file is --> \(resultDictionary?.description)")
-        
-        if let items = resultArray {
-            for item in items {
-                addItemDict(item as! NSDictionary, toparent: self.parent!)
-            }
-        }
         /////
     }
     

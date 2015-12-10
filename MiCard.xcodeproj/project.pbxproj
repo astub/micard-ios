@@ -18,6 +18,7 @@
 		23296B641B5E0CC90022D83A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23296B621B5E0CC90022D83A /* Main.storyboard */; };
 		233816021B6D6256002DFF08 /* NewItemNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233816011B6D6256002DFF08 /* NewItemNavVC.swift */; };
 		233816051B6D78C8002DFF08 /* SuperDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233816041B6D78C8002DFF08 /* SuperDeck.swift */; };
+		2348DC671C02ECF900101DDF /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2348DC661C02ECF900101DDF /* HomeView.xib */; };
 		234A75801B6DC55600FA5699 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234A757F1B6DC55600FA5699 /* Helper.swift */; };
 		2369DD211B6C71DF00997C52 /* CardFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369DD201B6C71DF00997C52 /* CardFile.swift */; };
 		2369DD231B6CAC8B00997C52 /* TypeSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369DD221B6CAC8B00997C52 /* TypeSelectionVC.swift */; };
@@ -57,6 +58,7 @@
 		23296B631B5E0CC90022D83A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		233816011B6D6256002DFF08 /* NewItemNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemNavVC.swift; sourceTree = "<group>"; };
 		233816041B6D78C8002DFF08 /* SuperDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperDeck.swift; sourceTree = "<group>"; };
+		2348DC661C02ECF900101DDF /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		234A757F1B6DC55600FA5699 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2369DD201B6C71DF00997C52 /* CardFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFile.swift; sourceTree = "<group>"; };
 		2369DD221B6CAC8B00997C52 /* TypeSelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeSelectionVC.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				23296B391B5E0C2A0022D83A /* AppDelegate.swift */,
 				23296B421B5E0C2A0022D83A /* LaunchScreen.xib */,
 				23296B621B5E0CC90022D83A /* Main.storyboard */,
+				2348DC661C02ECF900101DDF /* HomeView.xib */,
 				23AAEF7F1B92E23800A20A76 /* ShareVC.swift */,
 				23AAEF811B92EB1900A20A76 /* ServiceManager.swift */,
 				23C0DC151B5F0B2A007BFCB1 /* StudyDesk.swift */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2370C2601B74377C001329B7 /* iTunesArtwork@2x.png in Resources */,
+				2348DC671C02ECF900101DDF /* HomeView.xib in Resources */,
 				238658D61B78489A00056EB0 /* japanese.plist in Resources */,
 				236CBA481B709CEE0011BC59 /* starter.plist in Resources */,
 				239AF1BD1B75D58700EEFBB8 /* joker4.png in Resources */,

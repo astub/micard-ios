@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     print("Could not save \(error), \(error?.userInfo)")
                 }
                 
-                //SuperDeck().addPlistToRoot("starter")
+                SuperDeck().addPlistToRoot("starter")
             }
             
         } catch let error as NSError {

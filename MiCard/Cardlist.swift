@@ -95,7 +95,7 @@ class Cardlist: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         
         self.eIndex = indexPath
         
-        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Edit" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
+        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Edit" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
             let card = self.items[indexPath.row]
             let shareMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
             if card.isfile {
@@ -120,9 +120,9 @@ class Cardlist: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             shareMenu.view.tintColor = Helper().blueColor()
             self.presentViewController(shareMenu, animated: true, completion: nil)
         })
-        shareAction.backgroundColor = Helper().redColor()
+        editAction.backgroundColor = Helper().redColor()
         
-        let rateAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Move" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
+        let moveAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Move" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
             let card = self.items[indexPath.row]
             //remake decks w/0 file
             self.remakeDecksWithOut(card.objectID)
@@ -143,9 +143,9 @@ class Cardlist: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             }
             
         })
-        rateAction.backgroundColor = Helper().greenColor()
+        moveAction.backgroundColor = Helper().greenColor()
         
-        return [shareAction,rateAction]
+        return [editAction,moveAction]
     }
     
     func deleteCell(alert: UIAlertAction!) {
